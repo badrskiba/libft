@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bskiba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 15:38:26 by bskiba            #+#    #+#             */
-/*   Updated: 2016/11/18 18:40:58 by bskiba           ###   ########.fr       */
+/*   Created: 2016/11/17 18:00:03 by bskiba            #+#    #+#             */
+/*   Updated: 2016/11/17 22:39:36 by bskiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_putstr(char const *s)
 {
-	char *tmp;
-
-	tmp = b;
-	while (len > 0)
-	{
-		*tmp = (unsigned char)c;
-		tmp++;
-		len--;
-	}
-	return (b);
+	write(1, s, ft_strlen(s));
 }

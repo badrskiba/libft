@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_lst_count_elem.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bskiba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 15:38:26 by bskiba            #+#    #+#             */
-/*   Updated: 2016/11/18 18:40:58 by bskiba           ###   ########.fr       */
+/*   Created: 2016/11/17 17:58:23 by bskiba            #+#    #+#             */
+/*   Updated: 2016/11/18 18:37:03 by bskiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+size_t		ft_lst_count_elem(t_list *lst)
 {
-	char *tmp;
+	size_t		i;
 
-	tmp = b;
-	while (len > 0)
+	i = 0;
+	while (lst != NULL)
 	{
-		*tmp = (unsigned char)c;
-		tmp++;
-		len--;
+		lst = lst->next;
+		i++;
 	}
-	return (b);
+	return (i);
 }

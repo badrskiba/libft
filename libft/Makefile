@@ -6,7 +6,7 @@
 #    By: bskiba <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/11 12:30:54 by bskiba            #+#    #+#              #
-#    Updated: 2016/11/11 19:29:42 by bskiba           ###   ########.fr        #
+#    Updated: 2016/11/18 18:55:22 by bskiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,12 @@ SRC_NAME =  ft_isdigit.c ft_memcpy.c ft_strclr.c ft_striteri.c \
 			ft_memchr.c ft_strcat.c ft_strequ.c ft_strmap.c \
 			ft_strnew.c ft_isascii.c ft_memcmp.c ft_strchr.c \
 			ft_striter.c ft_strmapi.c ft_strnstr.c ft_strdup.c \
-			ft_toupper.c ft_tolower.c \
+			ft_toupper.c ft_tolower.c ft_swapchar.c ft_swapint.c\
+			ft_lst_count_elem.c ft_lstpush.c ft_lstmap.c ft_lstiter.c\
+			ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstnew.c\
+			ft_itoa.c ft_strsplit.c ft_putnbr.c ft_putnbr_fd.c \
+			ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c\
+			ft_putstr.c ft_putstr_fd.c ft_display_file.c\
 
 all: $(NAME)
 

@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_display_file.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bskiba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 15:38:26 by bskiba            #+#    #+#             */
-/*   Updated: 2016/11/18 18:40:58 by bskiba           ###   ########.fr       */
+/*   Created: 2016/11/18 18:53:28 by bskiba            #+#    #+#             */
+/*   Updated: 2016/11/18 18:59:51 by bskiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_display_file.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+int			ft_display_file(char *fichier)
 {
-	char *tmp;
+	int		fd;
+	char	*buffer;
 
-	tmp = b;
-	while (len > 0)
-	{
-		*tmp = (unsigned char)c;
-		tmp++;
-		len--;
-	}
-	return (b);
+	fd = open(fichier, O_RDONLY);
+	while (read(fd, &buffer, 1) != 0)
+		write(1, &buffer, 1);
+	return (0);
 }

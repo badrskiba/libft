@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_display_file.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bskiba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 15:38:26 by bskiba            #+#    #+#             */
-/*   Updated: 2016/11/18 18:40:58 by bskiba           ###   ########.fr       */
+/*   Created: 2016/11/18 18:55:36 by bskiba            #+#    #+#             */
+/*   Updated: 2016/11/18 19:01:09 by bskiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_DISPLAY_FILE_H
+# define FT_DISPLAY_FILE_H
 
-void	*ft_memset(void *b, int c, size_t len)
-{
-	char *tmp;
+# include <unistd.h>
+# include <fcntl.h>
 
-	tmp = b;
-	while (len > 0)
-	{
-		*tmp = (unsigned char)c;
-		tmp++;
-		len--;
-	}
-	return (b);
-}
+int		ft_display_file(char *fichier);
+
+#endif

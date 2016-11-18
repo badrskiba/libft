@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bskiba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 15:38:26 by bskiba            #+#    #+#             */
-/*   Updated: 2016/11/18 18:40:58 by bskiba           ###   ########.fr       */
+/*   Created: 2016/11/17 17:58:53 by bskiba            #+#    #+#             */
+/*   Updated: 2016/11/18 18:38:01 by bskiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char *tmp;
+	t_list	*tmp;
+	t_list	*new;
 
-	tmp = b;
-	while (len > 0)
+	new = (t_list*)malloc(sizeof(t_list));
+	if (new == NULL)
+		return (NULL);
+	new = (*f)(lst);
+	lst = lst->next;
+	while (lst)
 	{
-		*tmp = (unsigned char)c;
-		tmp++;
-		len--;
+		tmp = (*f)(lst);
+		ft_lstpush(&new, tmp);
+		lst = lst->next;
 	}
-	return (b);
+	return (new);
 }
