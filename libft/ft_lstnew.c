@@ -6,7 +6,7 @@
 /*   By: bskiba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 17:58:58 by bskiba            #+#    #+#             */
-/*   Updated: 2016/11/18 18:09:06 by bskiba           ###   ########.fr       */
+/*   Updated: 2016/11/19 00:34:45 by bskiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ t_list				*ft_lstnew(void const *content, size_t content_size)
 	{
 		tmp->content = NULL;
 		tmp->content_size = 0;
+		tmp->next = NULL;
 		return (tmp);
 	}
 	else

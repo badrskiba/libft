@@ -6,21 +6,23 @@
 /*   By: bskiba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 11:47:00 by bskiba            #+#    #+#             */
-/*   Updated: 2016/11/18 18:39:33 by bskiba           ###   ########.fr       */
+/*   Updated: 2016/11/18 23:11:58 by bskiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void				*ft_memalloc(size_t size)
 {
-	void *s1;
+	unsigned char	*s1;
+	size_t			i;
 
-	if (!size)
-		return (NULL);
-	s1 = (void*)malloc(size);
-	if (!s1)
-		return (NULL);
-	ft_bzero(s1, size);
-	return ((void*)s1);
+	i = 0;
+	if ((s1 = malloc(sizeof(void) * size)))
+	{
+		while (i != size)
+			s1[i++] = 0;
+		return (s1);
+	}
+	return (NULL);
 }
