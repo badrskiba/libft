@@ -6,11 +6,11 @@
 /*   By: bskiba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 18:53:28 by bskiba            #+#    #+#             */
-/*   Updated: 2016/11/18 18:59:51 by bskiba           ###   ########.fr       */
+/*   Updated: 2016/11/20 17:15:18 by bskiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_display_file.h"
+#include "libft.h"
 
 int			ft_display_file(char *fichier)
 {
